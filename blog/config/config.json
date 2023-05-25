@@ -2,21 +2,21 @@
   "development": {
     "username": "ec04740",
     "password": "Xec04740!",
-    "database": "CI0137-ec04740",
+    "database": "ci0137_ec04740",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "ec04740",
     "password": "Xec04740!",
-    "database": "CI0137-ec04740",
+    "database": "ci0137_ec04740",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "ec04740",
     "password": "Xec04740!",
-    "database": "CI0137-ec04740",
+    "database": "ci0137_ec04740",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
