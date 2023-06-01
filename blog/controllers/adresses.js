@@ -14,13 +14,13 @@ class AdressesController {
     async create(req, res, next) {
         if (req.method === 'POST') {
             await adress.create({
-                Nombre: req.body.nombre, 
-                Apellidos: req.body.apellidos, 
-                TelCasa: req.body.telCasa, 
-                DireccionCasa: req.body.direccionCasa, 
-                TelTrabajo: req.body.telTrabajo, 
-                DireccionTrabajo: req.body.direccionTrabajo, 
-                correo: req.body.correo 
+                Nombre: req.body.Nombre, 
+                Apellidos: req.body.Apellidos, 
+                TelCasa: req.body.TelCasa, 
+                DireccionCasa: req.body.DireccionCasa, 
+                TelTrabajo: req.body.TelTrabajo, 
+                DireccionTrabajo: req.body.DireccionTrabajo, 
+                Correo: req.body.Correo 
             });
             res.redirect('/adresses');
         }
@@ -33,13 +33,13 @@ class AdressesController {
         if (req.method === 'POST') {
             await adress.update(
             {
-                Nombre: req.body.nombre, 
-                Apellidos: req.body.apellidos, 
-                TelCasa: req.body.telCasa, 
-                DireccionCasa: req.body.direccionCasa, 
-                TelTrabajo: req.body.telTrabajo, 
-                DireccionTrabajo: req.body.direccionTrabajo, 
-                correo: req.body.correo 
+                Nombre: req.body.Nombre, 
+                Apellidos: req.body.Apellidos, 
+                TelCasa: req.body.TelCasa, 
+                DireccionCasa: req.body.DireccionCasa, 
+                TelTrabajo: req.body.TelTrabajo, 
+                DireccionTrabajo: req.body.DireccionTrabajo, 
+                Correo: req.body.Correo 
             },
             {
                 where: {

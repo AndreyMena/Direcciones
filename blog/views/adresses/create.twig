@@ -4,15 +4,40 @@
     <h1>{{ title }}</h1>
     <form method="POST">
         <div>
-            <label for="title">Título:</label><br />
-            <input id="title" name="title" type="text" />
+            <label for="Nombre">Nombre:</label><br />
+            <input id="Nombre" name="Nombre" type="text" />
         </div>
 
         <div>
-            <label for="body">Cuerpo:</label><br />
-            <textarea id="body" name="body"></textarea>
+            <label for="Apellidos">Apellidos:</label><br />
+            <textarea id="Apellidos" name="Apellidos"></textarea>
         </div>
 
+        <div>
+            <label for="TelCasa">Telefono de la casa:</label><br />
+            <textarea id="TelCasa" name="TelCasa"></textarea>
+        </div>
+
+        <div>
+            <label for="DireccionCasa">Direccion de la Casa:</label><br />
+            <textarea id="DireccionCasa" name="DireccionCasa"></textarea>
+        </div>
+
+        <div>
+            <label for="TelTrabajo">Telefono de la casa:</label><br />
+            <textarea id="TelTrabajo" name="TelTrabajo"></textarea>
+        </div>
+
+        <div>
+            <label for="DireccionTrabajo">Direccion del trabajo:</label><br />
+            <textarea id="DireccionTrabajo" name="DireccionTrabajo"></textarea>
+        </div>
+
+        <div>
+            <label for="Correo">Correo:</label><br />
+            <textarea id="Correo" name="Correo"></textarea>
+        </div>
+        
         <input type="submit" value="Crear" />
     </form>
 {% endblock %}
