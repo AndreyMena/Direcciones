@@ -1,4 +1,4 @@
-const adress = require('../models').adress;
+const adress = require('../models').Adresses;
 
 class AdressesController {
     async index(req, res, next) {
@@ -13,7 +13,15 @@ class AdressesController {
 
     async create(req, res, next) {
         if (req.method === 'POST') {
-            await adress.create({ title: req.body.title, body: req.body.body });
+            await adress.create({
+                Nombre: req.body.nombre, 
+                Apellidos: req.body.apellidos, 
+                TelCasa: req.body.telCasa, 
+                DireccionCasa: req.body.direccionCasa, 
+                TelTrabajo: req.body.telTrabajo, 
+                DireccionTrabajo: req.body.direccionTrabajo, 
+                correo: req.body.correo 
+            });
             res.redirect('/adresses');
         }
         else {
@@ -25,8 +33,13 @@ class AdressesController {
         if (req.method === 'POST') {
             await adress.update(
             {
-                title: req.body.title,
-                body: req.body.body
+                Nombre: req.body.nombre, 
+                Apellidos: req.body.apellidos, 
+                TelCasa: req.body.telCasa, 
+                DireccionCasa: req.body.direccionCasa, 
+                TelTrabajo: req.body.telTrabajo, 
+                DireccionTrabajo: req.body.direccionTrabajo, 
+                correo: req.body.correo 
             },
             {
                 where: {

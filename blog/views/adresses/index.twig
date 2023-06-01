@@ -3,17 +3,16 @@
 {% block body %}
   <h1>{{ title }}</h1>
   <p>{{ flashMessage }}</p>
-  {% for post in posts %}
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
+  {% for adress in adresses %}
+
     <small>
-        <a href="/posts/view/{{ post.id }}">Leer más</a>
+        <a href="/adresses/view/{{ adress.id }}">Leer más</a>
         &nbsp;|&nbsp;
-        <a href="/posts/update/{{ post.id }}">Editar</a>
+        <a href="/adresses/update/{{ adress.id }}">Editar</a>
         &nbsp;|&nbsp;
-        <a href="/posts/delete/{{ post.id }}" onclick="return confirm('¿Está seguro?');">Borrar</a>
+        <a href="/adresses/delete/{{ adress.id }}" onclick="return confirm('¿Está seguro?');">Borrar</a>
     </small>
     <hr />
   {% endfor %}
-  <a href="/posts/create">¡Añadir una nueva publicación!</a>
+  <a href="/adresses/create">¡Añadir una nueva publicación!</a>
 {% endblock %}

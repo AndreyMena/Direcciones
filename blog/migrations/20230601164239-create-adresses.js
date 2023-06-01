@@ -17,6 +17,9 @@ module.exports = {
       TelCasa: {
         type: Sequelize.STRING
       },
+      DireccionCasa: {
+        type: Sequelize.STRING
+      },
       TelTrabajo: {
         type: Sequelize.STRING
       },
