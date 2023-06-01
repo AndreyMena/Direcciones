@@ -3,21 +3,21 @@
     "username": "ec04740",
     "password": "Xec04740!",
     "database": "ci0137_ec04740",
-    "host": "127.0.0.1",
+    "host": "10.1.4.63",
     "dialect": "mysql"
   },
   "test": {
     "username": "ec04740",
     "password": "Xec04740!",
     "database": "ci0137_ec04740",
-    "host": "127.0.0.1",
+    "host": "10.1.4.63",
     "dialect": "mysql"
   },
   "production": {
     "username": "ec04740",
     "password": "Xec04740!",
     "database": "ci0137_ec04740",
-    "host": "127.0.0.1",
+    "host": "10.1.4.63",
     "dialect": "mysql"
   }
 }
