@@ -1,19 +1,19 @@
-const adress = require('../models').Adresses;
+const Adress = require('../models').Adresses;
 
 class AdressesController {
     async index(req, res, next) {
-        const adresses = await adress.findAll();
+        const adresses = await Adress.findAll();
         if (req.session.flashMessage) {
-            res.render('adresses/index', { title: 'Weblog', adresses: adresses, flashMessage: req.session.flashMessage });
+            res.render('adresses/index', { title: 'Direcciones', adresses: adresses, flashMessage: req.session.flashMessage });
         }
         else {
-            res.render('adresses/index', { title: 'Weblog', adresses: adresses});
+            res.render('adresses/index', { title: 'Direcciones', adresses: adresses});
         }
     }
 
     async create(req, res, next) {
         if (req.method === 'POST') {
-            await adress.create({
+            await Adress.create({
                 Nombre: req.body.Nombre, 
                 Apellidos: req.body.Apellidos, 
                 TelCasa: req.body.TelCasa, 
@@ -25,13 +25,13 @@ class AdressesController {
             res.redirect('/adresses');
         }
         else {
-            res.render('adresses/create', { title: 'Weblog, crear'});
+            res.render('adresses/create', { title: 'Direcciones, crear'});
         }
     }
 
     async update(req, res, next) {
         if (req.method === 'POST') {
-            await adress.update(
+            await Adress.update(
             {
                 Nombre: req.body.Nombre, 
                 Apellidos: req.body.Apellidos, 
@@ -49,17 +49,17 @@ class AdressesController {
             res.redirect('/adresses');
         }
         else {
-            const adress = await adress.findOne({
+            const adress = await Adress.findOne({
                 where: {
                     id: req.params.id
                 }
             });
-            res.render('adresses/update', { title: 'Weblog, editar', adress: adress});
+            res.render('adresses/update', { title: 'Direcciones, editar', adress: adress});
         }
     }
 
     async delete(req, res, next) {
-        await adress.destroy({
+        await Adress.destroy({
             where: {
                 id: req.params.id
             }
