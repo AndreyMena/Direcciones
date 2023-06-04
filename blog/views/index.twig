@@ -5,40 +5,6 @@
   <h1>{{title}}</h1>
   <p>Welcome to {{title}}</p>
 
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellidos</th>
-        <th scope="col">Teléfono de la casa</th>
-        <th scope="col">Direccion de la casa</th>
-        <th scope="col">Teléfono del trabajo</th>
-        <th scope="col">Direccion del trabajo</th>
-        <th scope="col">Correo electrónico</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Borrar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+{% include './adresses/index.twig' %}
 
 {% endblock %}
